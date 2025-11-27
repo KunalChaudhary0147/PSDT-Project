@@ -735,11 +735,11 @@
             <div class="icon-grid">
                 <div class="culture-icon">
                     <span class="icon-emoji">💃🏻</span>
-                    <div class="icon-label">Nritya</div>
+                    <div class="icon-label">Dance</div>
                 </div>
                 <div class="culture-icon">
                     <span class="icon-emoji">🪕</span>
-                    <div class="icon-label">Sangeet</div>
+                    <div class="icon-label">Music</div>
                 </div>
                 <div class="culture-icon">
                     <span class="icon-emoji">🌿</span>
@@ -754,7 +754,7 @@
                     <div class="icon-label">Food</div>
                 </div>
                 <div class="culture-icon">
-                    <span class="icon-emoji">🛺</span>
+                    <span class="icon-emoji">🕉️</span>
                     <div class="icon-label">Slow Living</div>
                 </div>
                 <div class="culture-icon">
@@ -788,6 +788,15 @@
                     // navigate to the dedicated Food & Rituals page
                     window.location.href = 'video_food.html';
                 }
+
+                function openSlowLivingVideo() {
+                    window.location.href = 'video_slowliving.html';
+                }
+
+                function openContestChallenges() {
+                    window.open('https://www.mygov.in/home/58/do/', '_blank');
+                }
+
 
                 function openHowWestVideos(){
                     // navigate to the dedicated "How West Copied Us" page
@@ -852,7 +861,7 @@
 
             <div class="culture-card" onclick="openSangeetVideos()">
                 <div class="card-icon">🎶</div>
-                <h3 class="card-title">Sangeet & Nritya</h3>
+                <h3 class="card-title">Dance And Music</h3>
                 <p class="card-description">
                     Explore classical forms like Bharatanatyam, Kathak, and Hindustani sangeet, alongside vibrant folk traditions.
                 </p>
@@ -882,7 +891,7 @@
                 </p>
             </div>
 
-            <div class="culture-card">
+            <div class="culture-card" onclick="openSlowLivingVideo()">
                 <div class="card-icon">🕉️</div>
                 <h3 class="card-title">Slow Living</h3>
                 <p class="card-description">
@@ -890,7 +899,7 @@
                 </p>
             </div>
 
-            <div class="culture-card">
+            <div class="culture-card" onclick="openContestChallenges()">
                 <div class="card-icon">🏆</div>
                 <h3 class="card-title">Contests & Challenges</h3>
                 <p class="card-description">

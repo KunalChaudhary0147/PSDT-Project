@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Food & Rituals — Reclaiming Roots</title>
+    <title>Sangeet & Nritya Videos — Reclaiming Roots</title>
     <style>
         body { font-family: 'Georgia', serif; background: #faf8f3; color: #2c1810; padding: 30px; }
         .container { max-width: 1100px; margin: 0 auto; }
@@ -23,17 +23,18 @@
 <body>
     <div class="container">
         <a class="back" onclick="history.back()">← Back</a>
-        <h1>Food — Video Library</h1>
+        <h1>Slow Living — Video Library</h1>
         <p class="lead">Click a video to play. Videos open inside the player below and will autoplay.</p>
 
         <div class="video-list" id="videoList">
-            <div class="video-item" data-video-id="KatdtodBpY8" onclick="playVideo('KatdtodBpY8')">
-                <div class="title">1. Food — Video 1</div>
+            <div class="video-item" data-video-id="f-6JiwNeyjs" onclick="playVideo('f-6JiwNeyjs')">
+                <div class="title">1. Slow Living — Video 1</div>
                 <div class="meta">YouTube</div>
             </div>
 
-            <div class="video-item" data-video-id="8x2t_uquMNg" onclick="playVideo('8x2t_uquMNg')">
-                <div class="title">2. Food — Video 2</div>
+
+            <div class="video-item" data-video-id="rSZeBs441dc" onclick="playVideo('rSZeBs441dc')">
+                <div class="title">2. Slow Living— Video 2</div>
                 <div class="meta">YouTube</div>
             </div>
         </div>
@@ -55,10 +56,12 @@
         function playVideo(id){
             var iframe = document.getElementById('ytPlayer');
             if(!id) return;
+            // set embed URL with autoplay
             iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?rel=0&autoplay=1';
             try { history.replaceState(null, '', '?v=' + encodeURIComponent(id)); } catch(e){}
         }
 
+        // on load: if ?v=ID provided, play it
         (function(){
             var vid = getQueryParam('v');
             if(vid) playVideo(vid);
